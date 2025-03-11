@@ -33,7 +33,6 @@ public class RatingServiceImpl implements RatingService {
     @Override
     public List<Rating> getRatingByHotelId(String hotelId) {
         System.out.println(hotelId);
-
         return ratingRepository.findByHotelId(hotelId);
     }
 
