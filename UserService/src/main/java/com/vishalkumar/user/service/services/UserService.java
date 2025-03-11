@@ -19,8 +19,5 @@ public interface UserService {
 
     User getUser(String userId);
 
-    //TODO: delete
-    //TODO: update
-
 
 }
