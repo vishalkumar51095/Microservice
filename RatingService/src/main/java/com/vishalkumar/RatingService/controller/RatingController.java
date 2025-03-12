@@ -5,11 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.vishalkumar.RatingService.service.RatingService;
 
@@ -34,16 +30,15 @@ public class RatingController {
 
     //get by user id
     @GetMapping("/users/{userId}")
-    public ResponseEntity<?> getRatingsByUserId(String userId){
+    public ResponseEntity<?> getRatingsByUserId(@PathVariable  String userId){
         return ResponseEntity.ok(ratingService.getRatingByUserId(userId));
     }
 
-    
-    //get by hotel id
+
     @GetMapping("hotels/{hotelId}")
-    public ResponseEntity<?> getRatingsByHotelId(String hotelId){
-        System.out.println("hotelId:"+hotelId);
+    public ResponseEntity<?> getRatingsByHotelId(@PathVariable String hotelId) {
+        System.out.println("hotelId: " + hotelId);
         return ResponseEntity.ok(ratingService.getRatingByHotelId(hotelId));
-    
     }
+
 }

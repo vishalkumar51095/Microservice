@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="UserService" />
+        <module name="ServiceRegistry" />
       </profile>
       <profile name="Annotation profile for RatingService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -25,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HotelService" options="-parameters" />
       <module name="RatingService" options="-parameters" />
+      <module name="ServiceRegistry" options="-parameters" />
       <module name="UserService" options="-parameters" />
     </option>
   </component>
