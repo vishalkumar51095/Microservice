@@ -1,0 +1,65 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="ServiceRegistry" />
+          <option value="ServiceRegistry" />
+          <option value="ServiceRegistry" />
+          <option value="ServiceRegistry" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+          <option value="UserService" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="org.springframework.security:spring-security-crypto:6.3.7" />
+          <option value="com.thoughtworks.xstream:xstream:1.4.20" />
+          <option value="org.apache.httpcomponents:httpclient:4.5.3" />
+          <option value="org.xmlunit:xmlunit-core:2.9.1" />
+          <option value="ch.qos.logback:logback-classic:1.2.12" />
+          <option value="org.apache.tomcat.embed:tomcat-embed-core:9.0.83" />
+          <option value="org.apache.tomcat.embed:tomcat-embed-websocket:9.0.83" />
+          <option value="org.yaml:snakeyaml:1.30" />
+          <option value="org.springframework:spring-expression:5.3.31" />
+          <option value="org.springframework:spring-context:5.3.31" />
+          <option value="org.springframework:spring-web:5.3.31" />
+          <option value="ch.qos.logback:logback-core:1.2.12" />
+          <option value="org.springframework:spring-webmvc:5.3.31" />
+          <option value="com.jayway.jsonpath:json-path:2.7.0" />
+          <option value="org.xmlunit:xmlunit-core:2.9.1" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

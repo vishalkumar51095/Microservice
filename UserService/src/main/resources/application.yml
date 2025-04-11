@@ -2,8 +2,6 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: USER-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5436/microservices
     username: postgres
@@ -16,3 +14,15 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  application:
+    name: USER-SERVICE
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
