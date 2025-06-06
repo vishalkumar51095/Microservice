@@ -65,3 +65,9 @@ resilience4j:
           - org.springframework.web.client.ResourceAccessException
           - java.net.ConnectException
           - java.lang.RuntimeException
+
+  retry:
+    instances:
+      ratingHotelService:
+        max-attempts: 3
+        wait-duration: 5s
