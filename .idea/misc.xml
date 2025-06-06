@@ -8,10 +8,12 @@
         <option value="$PROJECT_DIR$/HotelService/pom.xml" />
         <option value="$PROJECT_DIR$/RatingService/pom.xml" />
         <option value="$PROJECT_DIR$/ServiceRegistry/pom.xml" />
+        <option value="$PROJECT_DIR$/ApiGateway/ApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigServer/ConfigServer/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

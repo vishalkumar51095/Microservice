@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="UserService" />
         <module name="ServiceRegistry" />
+        <module name="HotelService" />
+        <module name="ConfigServer" />
+        <module name="UserService" />
+        <module name="ApiGateway" />
       </profile>
       <profile name="Annotation profile for RatingService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -18,12 +21,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="RatingService" />
-        <module name="HotelService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
       <module name="HotelService" options="-parameters" />
       <module name="RatingService" options="-parameters" />
       <module name="ServiceRegistry" options="-parameters" />

@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ServiceRegistryApplication" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="com.vishalkumar.ServiceRegistry.ServiceRegistryApplication" />
+    <module name="ServiceRegistry" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.vishalkumar.ServiceRegistry.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -3,11 +3,11 @@ server:
 
 spring:
   application:
-    name: USER-SERVICE
+    name: HOTEL-SERVICE
   datasource:
     url: jdbc:mysql://localhost:3306/microservices
     username: root
-    password: root
+    password: vishal
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -17,5 +17,20 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
+
+#  eureka:
+#    instance:
+#      prefer-ip-address: true
+#    client:
+#      fetch-registry: true
+#      register-with-eureka: true
+#      service-url:
+#        defaultZone: http://localhost:8761/eureka
+
   config:
     import: optional:configserver:http://localhost:8085
+
+okta:
+  oauth2:
+    issuer: https://dev-77584981.okta.com/oauth2/default
+    audience: api://default

@@ -3,7 +3,6 @@ import com.vishalkumar.RatingService.entities.Rating;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +25,27 @@ public class RatingController {
     @GetMapping
     public ResponseEntity<?> getRatings(){
         return ResponseEntity.ok(ratingService.getRatings());
+    }
+
+
+    @DeleteMapping("/{ratingId}")
+    public ResponseEntity<String> deleteRating(@PathVariable String ratingId) {
+        try {
+            ratingService.deleteRating(ratingId);
+            return ResponseEntity.ok("Rating deleted successfully.");
+        } catch (RuntimeException ex) {
+            return ResponseEntity.status(404).body(ex.getMessage());
+        }
+    }
+
+    @PutMapping("/{ratingId}")
+    public ResponseEntity<Rating> updateRating(@PathVariable String ratingId, @RequestBody Rating updatedRating) {
+        try {
+            Rating rating = ratingService.updateRating(ratingId, updatedRating);
+            return ResponseEntity.ok(rating);
+        } catch (RuntimeException ex) {
+            return ResponseEntity.status(404).body(null);
+        }
     }
 
     //get by user id
