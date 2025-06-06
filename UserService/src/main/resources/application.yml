@@ -5,9 +5,9 @@ spring:
   application:
     name: USER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/microservices
+    url: jdbc:postgresql://localhost:5436/microservices
     username: postgres
-    password: vishal
+    password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -33,3 +33,35 @@ spring:
 #    service-url:
 #      defaultZone: http://localhost:8761/eureka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      ratingHotelBreaker:
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        recordExceptions:
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+          - org.springframework.web.client.HttpServerErrorException
+          - org.springframework.web.client.HttpClientErrorException
+          - org.springframework.web.client.ResourceAccessException
+          - java.net.ConnectException
+          - java.lang.RuntimeException
