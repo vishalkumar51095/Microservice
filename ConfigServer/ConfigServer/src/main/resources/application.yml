@@ -1,0 +1,17 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: CONFIG-SERVER
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vishalkumar51095/microservice-config/
+          clone-on-start: true
+          default-label: master   # or your actual default branch name
+          # optionally:
+          # username: your-username
+          # password: your-password

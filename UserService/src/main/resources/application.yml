@@ -5,9 +5,9 @@ spring:
   application:
     name: USER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5436/microservices
+    url: jdbc:postgresql://localhost:5432/microservices
     username: postgres
-    password: postgres
+    password: vishal
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -16,3 +16,20 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  config:
+    import: configserver:http://localhost:8085
+
+#  profiles:
+#    active: prod
+
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
