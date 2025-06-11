@@ -5,9 +5,9 @@ spring:
   application:
     name: USER-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5436/microservices
+    url: jdbc:postgresql://localhost:5432/microservices
     username: postgres
-    password: postgres
+    password: vishal
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
